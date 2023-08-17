@@ -321,7 +321,7 @@ export function Maze(){
             window.open("https://www.linkedin.com/in/oguzhangoksu")
         }
         else{
-            window.open("https://github.com/oguzhangoksu")
+            window.open("https://github.com/oguzhangoksu/Maze-Solver")
         }
     }
     function handleMouseEnter(value){
