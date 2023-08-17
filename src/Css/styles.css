@@ -1,0 +1,135 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fontheader{
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+.font{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+.menu{
+    display:block;
+    min-width: 300px;
+    margin-left: 50px;
+    height: 100vh;
+}
+.allpage{
+    display: flex;
+}
+@media screen and (max-width: 900px) {
+    .menu {
+      width: 95%;
+      height: auto;
+      margin-left: 2.5%;
+
+    }
+
+    .allpage{
+        flex-direction: column;
+    }
+    .containerBox{
+        margin-left: 1% !important;
+        margin-top: 20px !important;
+        height: 100vh;
+    }
+    .fontheader{
+        margin-bottom: 30px;
+    }
+  }
+.containerBox{
+    display:flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin:1%;
+    margin-left: 70px;
+}
+
+.box{
+    display: block;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+
+}
+.box2{
+    animation-name: identifier;
+    animation-duration: 4s;
+}
+
+@keyframes identifier {
+    from {background-color: white;}
+    to {background-color: yellow ;}
+}
+
+.visited{
+    display: block;
+    border: 1px solid black;
+    background-color: yellow !important;
+}
+.path{
+    background-color: green !important;
+    display: block;
+    border: 1px solid black;
+}
+
+.linkinButton{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    border: 1px solid black;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 4px;
+    border-radius: 20px;
+    background-color: rgba(6,120,182,255);
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    
+}
+.githubButton{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    color: white;
+    padding: 4px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: black;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.linkedIn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: 10px;
+    padding: 5px;
+    background-image: url("../image/linkedin2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.github{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: 10px;
+    background-image: url("../image/github.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
