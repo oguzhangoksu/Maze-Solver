@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Maze-Solver/static/css/main.761e5089.css",
+    "main.js": "/Maze-Solver/static/js/main.92f04a3a.js",
+    "static/js/787.87956849.chunk.js": "/Maze-Solver/static/js/787.87956849.chunk.js",
+    "index.html": "/Maze-Solver/index.html",
+    "main.761e5089.css.map": "/Maze-Solver/static/css/main.761e5089.css.map",
+    "main.92f04a3a.js.map": "/Maze-Solver/static/js/main.92f04a3a.js.map",
+    "787.87956849.chunk.js.map": "/Maze-Solver/static/js/787.87956849.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.761e5089.css",
+    "static/js/main.92f04a3a.js"
+  ]
+}
