@@ -22,8 +22,12 @@ export function Maze(){
     const mazeRef=useRef();
     const divarray=Array.from({ length: row*row }, (_, index) => index);
     useEffect(()=>{
-        document.getElementById(current).innerHTML=""
-        document.getElementById(target).innerHTML=""
+        if(document.getElementById(current)!==null){ 
+            document.getElementById(current).innerHTML=""
+        }
+        if(document.getElementById(target)!==null){
+            document.getElementById(target).innerHTML=""
+        }
         array2d = Array.from({ length: row }, () => Array(row).fill(0));
         array2d[0][0]=2;
         array2d[Math.floor(((row*row)-1)/row)][((row*row)-1)%row]=3;
@@ -69,24 +73,6 @@ export function Maze(){
         backgroundColor:"blue",
         color:"white"
     }
-
-
-/*
-    function definestyle(index){
-        element=document.getElementById(index);
-        if(index===current){
-            element.className="currentblock"
-        }
-        else if(index===target){
-            element.className="targetblock"
-        }
-        else{
-            element.className="normalblock"
-        }
-        
-    }
-    */
-
 
     function definestyle(index){
 
@@ -304,14 +290,13 @@ export function Maze(){
 
     function handleReset(){
         let value=document.getElementById("row").value
-        if(findPath===true){
-            window.location.reload(false);
-            
+
+        for(let i=0;i<(row*row);i++){
+            document.getElementById(i).className="box"    
         }
-        else{
-            if(value<=50 && value){
-                setRow(value);
-            }
+        setFindPath(false);
+        if(value<=43 && value){
+            setRow(value);
         }
        
     }
@@ -355,7 +340,7 @@ return(
                 <AlgorithmSelection style={{height:"20px !important"}}className="deneme" sendDataToParent={handleAlgorithm}></AlgorithmSelection>
              
                 <Box component="form"sx={{'& > :not(style)': { m: 1, width: '25ch' },}}novalidateautocomplete="off">
-                    <TextField style={{marginTop:"10px",height:"40px"}} id="row" label="Cells Per Row" variant="outlined"  />
+                    <TextField style={{marginTop:"10px",height:"40px"}} id="row" label="Cells Per Row(Lower than 44)" variant="outlined"  />
                 </Box>
                 <Button sx={{marginTop:"20px",backgroundColor:"green"}} onClick={handleChange} variant="contained">Find Path</Button>
                 <Button sx={{marginTop:"20px",backgroundColor:"red"}} onClick={handleReset} variant="contained">Reset</Button>
